@@ -10,6 +10,9 @@ lazy val root = (project in file("."))
 libraryDependencies ++= Seq(
   "org.apache.kafka" %% "kafka-streams-scala" % "3.4.0",
   "org.apache.kafka" % "kafka-streams" % "3.4.0",
+  "org.apache.kafka" % "kafka-clients" % "3.4.0",
+  "org.apache.kafka" % "connect-api" % "3.4.0",
   "org.slf4j" % "slf4j-api" % "2.0.6",
-  "org.slf4j" % "slf4j-simple" % "2.0.6"
+  "org.slf4j" % "slf4j-simple" % "2.0.6",
+  "org.scalatest" %% "scalatest" % "3.2.15" % Test
 )

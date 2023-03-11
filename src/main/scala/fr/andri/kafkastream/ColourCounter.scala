@@ -27,7 +27,7 @@ object ColourCounter {
     val userAndColorTable:KTable[String, String] = builder.table[String, String]("user-key-and-color");
 
     val favoriteColoursTable: KTable[String,Long] = userAndColorTable
-      .groupBy((user: String, colour: String) => (colour, 1L))
+      .groupBy((user: String, colour: String) => (colour, colour))
       .count()
 
     favoriteColoursTable.toStream.to("user-keys-and-colours-scala")
